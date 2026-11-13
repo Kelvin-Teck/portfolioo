@@ -1,339 +1,664 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfolio</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Playwrite+GB+S+Guides:ital@0;1&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body class="">
-    <!-- NAV BAR -->
-    <nav>
-      <div class="left">
-        <a href="/">Eneh Kelvin C.</a>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="claude:viewport-fit-sides" content="cover" />
+  <title>Eneh Kelvin Chukwuemeka — Full-Stack Engineer (Backend-Focused)</title>
+  <meta name="description" content="Full-stack engineer with ~3 years experience specializing in TypeScript, Node.js, React, Next.js, concurrency-safe APIs, idempotent webhooks, and scalable cloud architectures." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="styles.css" />
+  <script>
+    (function() {
+      const saved = localStorage.getItem('theme');
+      document.documentElement.setAttribute('data-theme', saved || 'light');
+    })();
+  </script>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="nav" role="navigation" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a href="#" class="nav-brand" aria-label="Home">Oluwakelvin</a>
+      
+      <div class="nav-menu" id="nav-menu">
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#experience" class="nav-link">Experience</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#education" class="nav-link">Education</a>
+        <a href="#contact" class="nav-link">Contact</a>
       </div>
-      <div class="right">
-        <a href="https://github.com/Kelvin-Teck" target="_blank" rel="noopener noreferrer">
+
+      <div class="nav-actions">
+        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark/light mode" title="Toggle theme">
+          <i class="fa-solid fa-moon"></i>
+        </button>
+        <a href="https://github.com/Kelvin-Teck" target="_blank" rel="noopener noreferrer" class="nav-icon-link" aria-label="GitHub" title="GitHub">
           <i class="fa-brands fa-github"></i>
-          <span>Github</span>
         </a>
-        <a href="https://www.linkedin.com/in/eneh-chukwuemeka-kelvin-694a42198/" target="_blank" rel="noopener noreferrer">
+        <a href="https://www.linkedin.com/in/kelvin-eneh-694a42198" target="_blank" rel="noopener noreferrer" class="nav-icon-link" aria-label="LinkedIn" title="LinkedIn">
           <i class="fa-brands fa-linkedin"></i>
-          <span>LinkedIn</span>
         </a>
-        <a
-          href="mailto:kelvineneh4@gmail.com"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <i class="fa-solid fa-envelope"></i>
-          <span>Email</span>
-        </a>
+        <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+          <i class="fa-solid fa-bars"></i>
+        </button>
       </div>
-    </nav>
+    </div>
+  </nav>
 
-    <!--  -->
-    <main>
-      <!-- Hero -->
-      <section id="" class="hero-section">
-        <div class="text">
-          <h2>Hi, I am Eneh Kelvin Chukwuemeka</h2>
-          <p>
-            Software Developer/Engineer with over 2 years plus of working
-            experience in building good and efficient web applications both
-            frontend and backend, crafting scalable APIs using Node.js.
-            Specializing in clean, efficient code for high-performance
-            solutions. Passionate about staying current with industry trends.
+  <main>
+    <!-- Hero Section -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-inner">
+        <div class="hero-content">
+          <p class="hero-greeting"><i class="fa-solid fa-location-dot"></i> Lagos, Nigeria</p>
+          <h1 id="hero-title" class="hero-name">Eneh Kelvin Chukwuemeka</h1>
+          <p class="hero-tagline">Full-Stack Engineer (Backend-Focused)</p>
+          <p class="hero-description">
+            Full-stack engineer with about three years of professional experience, strongest on the backend. Builds secure, data-sensitive systems in <strong>TypeScript</strong> and <strong>Node.js</strong> (Express, Nest.js, PostgreSQL, Redis): concurrency-safe booking and payment flows, idempotent webhooks, KYC verification, and RBAC. Ships production interfaces in <strong>React, Next.js, and Tailwind CSS</strong>. Has mentored 150+ students in software engineering.
           </p>
-
-          <div class="links">
-            <a href="#skills">
-              <i class="fa-solid fa-code"></i>
-              <span>Skills</span>
-            </a>
-            <a href="#education">
-              <i class="fa-solid fa-graduation-cap"></i>
-              <span>Education</span>
-            </a>
-            <a href="#experience">
-              <i class="fa-solid fa-certificate"></i>
-              <span>Experience</span>
-            </a>
-            <a href="#gallery">
-             <i class="fa-solid fa-images"></i>
-              <span>Gallery</span>
-            </a>
-            <a href="#contact">
-              <i class="fa-solid fa-envelope"></i>
-              <span>Contact</span>
-            </a>
+          <div class="hero-actions">
+            <a href="#experience" class="btn btn--primary">View Experience</a>
+            <a href="#projects" class="btn btn--outline">Featured Projects</a>
           </div>
-        </div>
-        <div class="potrait-image">
-          <img src="./assets/images/image-1 (18).jpg" alt="eneh Kelvin passport" />
-        </div>
-      </section>
-      <!-- Skills -->
-      <section id="skills" class="skills-section">
-        <h2>Skills</h2>
-        <div class="text">
-          I am a dynamic Software Engineer with expertise in frontend development
-          backend development, database architecture. Passionate about building scalable solutions, I leverage
-          modern technologies to drive efficiency and innovation. My skill set
-          includes
-        </div>
-
-        <div class="cells">
-          <div class="cell">
-            <img src="./assets/images/html-logo.webp" alt="html logo" />
-            <span>HTML</span>
-          </div>
-
-          <div class="cell">
-            <img src="./assets/images/css-logo.webp" alt="css logo" />
-            <span>CSS</span>
-          </div>
-
-          <div class="cell">
-            <img
-              src="./assets/images/javascript-logo.webp"
-              alt="javascript logo"
-            />
-            <span>JavaScript</span>
-          </div>
-
-          <div class="cell">
-            <img src="./assets/images/node-logo.webp" alt="node logo" />
-            <span>Node.js</span>
-          </div>
-
-          <div class="cell">
-            <img src="./assets/images/react-logo.webp" alt="react logo" />
-            <span>React.js</span>
-          </div>
-          <div class="cell">
-            <img src="./assets/images/git.png" alt="react logo" />
-            <span>Git</span>
-          </div>
-          <div class="cell">
-            <img src="./assets/images/typescript-logo.webp" alt="react logo" />
-            <span>TypeScript</span>
-          </div>
-          <div class="cell">
-            <img
-              src="./assets/images/Postgresql_elephant.svg"
-              alt="react logo"
-            />
-            <span>Postgres</span>
-          </div>
-          <div class="cell">
-            <img src="./assets/images/mongodb-logo.jpg" alt="react logo" />
-            <span>MongoDB</span>
-          </div>
-        </div>
-      </section>
-
-      <!-- Education -->
-      <section id="education" class="education-section">
-        <h2>Education</h2>
-
-        <div class="group">
-          <div>
-            <span><i class="fa-solid fa-graduation-cap"></i></span>
-            <h3 class="institution">University Of Lagos, Nigeria.</h3>
-            <div class="degree">Bachelor of Science <em>(BSc.)</em></div>
-          </div>
-          <div>
-            <span><i class="fa-solid fa-graduation-cap"></i></span>
-            <h3 class="institution">
-              Bright Network Internship Experience, United Kingdom (London).
-            </h3>
-            <div class="degree">Certificate of Completion</div>
-          </div>
-          <div>
-            <span><i class="fa-solid fa-graduation-cap"></i></span>
-            <h3 class="institution">Career Builders Academy, Nigeria.</h3>
-            <div class="degree">Diploma In Desktop Publishing</div>
-          </div>
-        </div>
-      </section>
-      <!-- Work Experience -->
-      <section id="experience" class="education-section">
-        <h2>Work Experience</h2>
-
-        <div class="group">
-          <div>
-            <span><i class="fa-solid fa-briefcase"></i></span>
-            <h3 class="institution">NITDA, NITHUB UNILAG.</h3>
-            <div class="degree">Backend Developer</div>
-          </div>
-          <div>
-            <span><i class="fa-solid fa-briefcase"></i></span>
-            <h3 class="institution">ZEINNY CRAFTS, Nigeria.</h3>
-            <div class="degree">Backend Developer</div>
-          </div>
-          <div>
-            <span><i class="fa-solid fa-briefcase"></i></span>
-            <h3 class="institution">MonieTracka, Nigeria.</h3>
-            <div class="degree">Backend Developer</div>
-          </div>
-          <div>
-            <span><i class="fa-solid fa-briefcase"></i></span>
-            <h3 class="institution">Spraditech Digital Solutions, Nigeria.</h3>
-            <div class="degree">Coding Instructor</div>
-          </div>
-
-        </div>
-     
-        </div>
-      </section>
-      <!-- Gallery -->
-      <!-- <section id="gallery" class="gallery-section">
-        <h2>Gallery</h2>
-        <div class="images">
-          <div class="carousel">
-            <div class="carousel-container">
-              <img
-                src="./assets/images/my-photo.webp"
-                class="carousel-item active"
-              />
-              <img
-                src="./assets/images/image-1 (1).jpg"
-                class="carousel-item active"
-              />
-              <img
-                src="./assets/images/image-1 (2).jpg"
-                class="carousel-item active"
-              />
-              <img
-                src="./assets/images/image-1 (3).jpg"
-                class="carousel-item active"
-              />
-              <img
-                src="./assets/images/image-1 (4).jpg"
-                class="carousel-item active"
-              />
-              <img
-                src="./assets/images/image-1 (5).jpg"
-                class="carousel-item active"
-              />
-              <img
-                src="./assets/images/image-1 (6).jpg"
-                class="carousel-item active"
-              />
-              <img
-                src="./assets/images/image-1 (7).jpg"
-                class="carousel-item active"
-              />
-              <img
-                src="./assets/images/image-1 (8).jpg"
-                class="carousel-item active"
-              />
-              <img
-                src="./assets/images/image-1 (9).jpg"
-                class="carousel-item active"
-              />
-              <img
-                src="./assets/images/image-1 (10).jpg"
-                class="carousel-item active"
-              />
-              <img
-                src="./assets/images/image-1 (11).jpg"
-                class="carousel-item active"
-              />
-              <img
-                src="./assets/images/image-1 (12).jpg"
-                class="carousel-item active"
-              />
-              <img
-                src="./assets/images/image-1 (13).jpg"
-                class="carousel-item active"
-              />
-              <img
-                src="./assets/images/image-1 (14).jpg"
-                class="carousel-item active"
-              />
-              <img
-                src="./assets/images/image-1 (15).jpg"
-                class="carousel-item active"
-              />
-              <img
-                src="./assets/images/image-1 (16).jpg"
-                class="carousel-item active"
-              />
-              <img
-                src="./assets/images/image-1 (17).jpg"
-                class="carousel-item active"
-              />
-              <img
-                src="./assets/images/image-1 (18).jpg"
-                class="carousel-item active"
-              />
-
+          <div class="hero-stats">
+            <div class="stat">
+              <span class="stat-value">3+</span>
+              <span class="stat-label">Years Experience</span>
             </div>
-
-            <button class="prev">&#10094;</button>
-            <button class="next">&#10095;</button>
+            <div class="stat">
+              <span class="stat-value">150+</span>
+              <span class="stat-label">Students Mentored</span>
+            </div>
+            <div class="stat">
+              <span class="stat-value">4+</span>
+              <span class="stat-label">Companies</span>
+            </div>
+            <div class="stat">
+              <span class="stat-value">99.9%</span>
+              <span class="stat-label">System Uptime</span>
+            </div>
           </div>
         </div>
-      </section> -->
-      <!-- Contact -->
-      <section id="contact" class="contact-section">
-        <h2>Contact</h2>
+        <div class="hero-visual">
+          <div class="hero-image-wrapper">
+            <img src="./assets/images/image-1 (18).jpg" alt="Eneh Kelvin Chukwuemeka" class="hero-image" loading="lazy" />
+            <div class="hero-image-glow"></div>
+          </div>
+          <div class="floating-cards">
+            <div class="float-card" data-delay="0">
+              <i class="fa-brands fa-node-js"></i>
+              <span>Node.js / Nest.js</span>
+            </div>
+            <div class="float-card" data-delay="1">
+              <i class="fa-brands fa-react"></i>
+              <span>Next.js & React</span>
+            </div>
+            <div class="float-card" data-delay="2">
+              <i class="fa-brands fa-js"></i>
+              <span>TypeScript</span>
+            </div>
+            <div class="float-card" data-delay="3">
+              <i class="fa-solid fa-database"></i>
+              <span>PostgreSQL & Redis</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-        <div class="group">
-          <div class="text">Get In Touch. I'd love to connect! Whether you have a project in mind, need technical expertise, or just want to discuss innovative ideas, feel free to reach out.</div>
+    <!-- Skills Section -->
+    <section id="skills" class="section skills" aria-labelledby="skills-title">
+      <div class="section-inner">
+        <header class="section-header">
+          <h2 id="skills-title" class="section-title">Technical Skills</h2>
+          <p class="section-subtitle">Core technologies and architectural patterns applied across production systems</p>
+        </header>
+        <div class="skills-grid" role="list">
+          <!-- Backend Engineering -->
+          <article class="skill-card skill-card--category" role="listitem">
+            <div class="skill-category-header">
+              <div class="skill-icon"><i class="fa-solid fa-server"></i></div>
+              <div>
+                <h3 class="skill-name">Backend & APIs</h3>
+                <p class="skill-desc">High-throughput, secure architectures</p>
+              </div>
+            </div>
+            <ul class="skill-pills" aria-label="Backend skills">
+              <li>Node.js</li>
+              <li>Express.js</li>
+              <li>Nest.js</li>
+              <li>REST API Design</li>
+              <li>JWT, OTP & RBAC</li>
+              <li>Zod / Joi Validation</li>
+              <li>Idempotency</li>
+              <li>Redis Locking</li>
+              <li>Rate Limiting</li>
+            </ul>
+          </article>
 
-          <form action="https://formspree.io/f/xpwpybqg" method="POST">
-            <label for="name">Name</label>
-            <input type="text" id="name" name="name" />
+          <!-- Languages -->
+          <article class="skill-card skill-card--category" role="listitem">
+            <div class="skill-category-header">
+              <div class="skill-icon"><i class="fa-solid fa-code"></i></div>
+              <div>
+                <h3 class="skill-name">Languages</h3>
+                <p class="skill-desc">Type-safe and modern standards</p>
+              </div>
+            </div>
+            <ul class="skill-pills" aria-label="Languages">
+              <li>TypeScript</li>
+              <li>JavaScript (ES6+)</li>
+              <li>SQL</li>
+              <li>HTML5</li>
+              <li>CSS3</li>
+            </ul>
+          </article>
 
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email"/>
+          <!-- Databases & ORMs -->
+          <article class="skill-card skill-card--category" role="listitem">
+            <div class="skill-category-header">
+              <div class="skill-icon"><i class="fa-solid fa-database"></i></div>
+              <div>
+                <h3 class="skill-name">Databases & ORMs</h3>
+                <p class="skill-desc">Relational, document & cache systems</p>
+              </div>
+            </div>
+            <ul class="skill-pills" aria-label="Database skills">
+              <li>PostgreSQL</li>
+              <li>MySQL</li>
+              <li>MongoDB</li>
+              <li>Redis</li>
+              <li>Prisma</li>
+              <li>Sequelize</li>
+            </ul>
+          </article>
 
-            <label for="message">Message</label>
-            <textarea id="message" name="message" cols="30" rows="10"></textarea>
+          <!-- Frontend & Mobile -->
+          <article class="skill-card skill-card--category" role="listitem">
+            <div class="skill-category-header">
+              <div class="skill-icon"><i class="fa-brands fa-react"></i></div>
+              <div>
+                <h3 class="skill-name">Frontend & Mobile</h3>
+                <p class="skill-desc">Performant user interfaces & apps</p>
+              </div>
+            </div>
+            <ul class="skill-pills" aria-label="Frontend skills">
+              <li>React.js</li>
+              <li>Next.js (App Router)</li>
+              <li>API Route Handlers</li>
+              <li>Tailwind CSS</li>
+              <li>Redux Toolkit (RTK)</li>
+              <li>React Native</li>
+              <li>SurveyJS</li>
+            </ul>
+          </article>
 
-            <button type="submit">Send Message</button>
+          <!-- Design to Code -->
+          <article class="skill-card skill-card--category" role="listitem">
+            <div class="skill-category-header">
+              <div class="skill-icon"><i class="fa-solid fa-pen-ruler"></i></div>
+              <div>
+                <h3 class="skill-name">Design to Code</h3>
+                <p class="skill-desc">Pixel-perfect responsive implementation</p>
+              </div>
+            </div>
+            <ul class="skill-pills" aria-label="Design to code skills">
+              <li>Figma to Code</li>
+              <li>Component Libraries</li>
+              <li>Validation Forms</li>
+              <li>Data Tables</li>
+              <li>Admin Dashboards</li>
+              <li>Data Visualizations</li>
+            </ul>
+          </article>
+
+          <!-- Tools & DevOps -->
+          <article class="skill-card skill-card--category" role="listitem">
+            <div class="skill-category-header">
+              <div class="skill-icon"><i class="fa-solid fa-screwdriver-wrench"></i></div>
+              <div>
+                <h3 class="skill-name">Tools & DevOps</h3>
+                <p class="skill-desc">CI/CD, containers & cloud deployment</p>
+              </div>
+            </div>
+            <ul class="skill-pills" aria-label="Tools and DevOps">
+              <li>Git & GitHub</li>
+              <li>Docker</li>
+              <li>Postman</li>
+              <li>CI/CD Pipelines</li>
+              <li>Render</li>
+              <li>Vercel</li>
+              <li>Cloudinary</li>
+              <li>AI-Assisted Dev</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Professional Experience Section -->
+    <section id="experience" class="section experience" aria-labelledby="experience-title">
+      <div class="section-inner">
+        <header class="section-header">
+          <h2 id="experience-title" class="section-title">Professional Experience</h2>
+          <p class="section-subtitle">Engineering scalable backends, compliance platforms, and production web systems</p>
+        </header>
+
+        <div class="timeline">
+          <!-- Sage Grey Technologies -->
+          <article class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <div class="timeline-header">
+                <h3 class="timeline-role">Full-Stack Engineer</h3>
+                <span class="timeline-company">Sage Grey Technologies Limited (Contract)</span>
+              </div>
+              <time class="timeline-date" datetime="2026">2026 — Present</time>
+              <ul class="timeline-bullets">
+                <li>Architected and developed <strong>Proxze Enterprise</strong>, a multi-tenant B2B compliance and identity platform using Next.js 16, React 19, TypeScript, Tailwind CSS v4, and Redux Toolkit.</li>
+                <li>Engineered enterprise Single Sign-On (SSO) ticket exchange and secure Next.js API proxy route handlers, shielding microservices behind server-side token validation and PII-sanitized session guards.</li>
+                <li>Built an end-to-end Batch KYC engine with CSV parsing, payload normalization, identity scoring, and manual verification review overrides for high-volume corporate onboarding.</li>
+                <li>Developed developer platform tooling including self-serve API key management (rolling/masking), IP allowlisting, and interactive webhook infrastructure with delivery retry mechanics.</li>
+                <li>Engineered a dynamic activity planner and survey engine in Proxze Business using SurveyJS and jsPDF, letting enterprise clients author custom field surveys and export automated PDF timesheets.</li>
+                <li>Built the <strong>Super Proxze</strong> web application from scratch as sole author, implementing agent network trees with dynamic QR codes, multi-tier commission calculations (fixed/percentage), and real-time wallet payout flows.</li>
+                <li>Authored a 26-endpoint backend API handover specification, establishing contract standards and accelerating delivery between frontend and microservice teams.</li>
+              </ul>
+              <ul class="timeline-tech">
+                <li>Next.js 16</li>
+                <li>React 19</li>
+                <li>TypeScript</li>
+                <li>Tailwind CSS v4</li>
+                <li>Redux Toolkit</li>
+                <li>SurveyJS</li>
+                <li>jsPDF</li>
+                <li>SSO</li>
+                <li>Webhooks</li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- Konnar Africa -->
+          <article class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <div class="timeline-header">
+                <h3 class="timeline-role">Full-Stack Engineer</h3>
+                <span class="timeline-company">Konnar Africa (Real Estate & Housing)</span>
+              </div>
+              <time class="timeline-date" datetime="2025">2025 — 2026</time>
+              <ul class="timeline-bullets">
+                <li>Built a full-stack KYC verification system: a Node.js automated scoring engine with a responsive Next.js admin interface, reducing identity fraud and streamlining onboarding.</li>
+                <li>Architected parallelized backend APIs and built real-time data visualizations with Tailwind CSS for an admin analytics dashboard.</li>
+                <li>Standardized API contracts and built a shared UI component library for consistent data sync and brand experience across platforms.</li>
+                <li>Redesigned property discovery with scalable media infrastructure and Cloudinary integration, powering advanced search and filtering.</li>
+                <li>Engineered a concurrency-safe booking engine using Sequelize transactions to protect data integrity across high-volume payment flows.</li>
+              </ul>
+              <ul class="timeline-tech">
+                <li>Node.js</li>
+                <li>Next.js</li>
+                <li>TypeScript</li>
+                <li>Sequelize</li>
+                <li>Cloudinary</li>
+                <li>Tailwind CSS</li>
+                <li>PostgreSQL</li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- Scelloo Limited -->
+          <article class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <div class="timeline-header">
+                <h3 class="timeline-role">Backend Engineer</h3>
+                <span class="timeline-company">Scelloo Limited (Software Solutions)</span>
+              </div>
+              <time class="timeline-date" datetime="2025">2025</time>
+              <ul class="timeline-bullets">
+                <li>Worked on <strong>CornieHealth</strong>, Scelloo's healthcare and telemedicine platform, co-developing scalable features and a full-featured application for medical practitioners.</li>
+                <li>Led a database performance audit and refactored pagination across 32+ high-traffic endpoints, cutting API latency by 40% and setting a team-wide optimization standard.</li>
+                <li>Built an automated KYC verification engine and an RBAC system for family proxies, strengthening compliance and protecting sensitive patient health records.</li>
+              </ul>
+              <ul class="timeline-tech">
+                <li>Node.js</li>
+                <li>Express.js</li>
+                <li>PostgreSQL</li>
+                <li>Redis</li>
+                <li>RBAC</li>
+                <li>REST APIs</li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- NITDA, NITHUB -->
+          <article class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <div class="timeline-header">
+                <h3 class="timeline-role">Backend Engineer</h3>
+                <span class="timeline-company">NITDA, NITHUB, UNILAG</span>
+              </div>
+              <time class="timeline-date" datetime="2023">2023 — 2025</time>
+              <ul class="timeline-bullets">
+                <li>Migrated a multi-page experience to a high-performance single-page web app, growing customer engagement by 30%.</li>
+                <li>Contributed to an energy consulting SaaS platform, cutting paperwork by 75% and restructuring communication flow across three departments.</li>
+                <li>Taught web development to 30+ students across two upskilling cohorts.</li>
+              </ul>
+              <ul class="timeline-tech">
+                <li>Node.js</li>
+                <li>PostgreSQL</li>
+                <li>Redis</li>
+                <li>Docker</li>
+                <li>SPA</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+
+        <!-- Contract & Freelance Engineering -->
+        <h3 class="sub-section-title">Contract & Freelance Engineering (2023 — 2025)</h3>
+        <div class="cards-grid-2">
+          <article class="info-card">
+            <div class="info-card-header">
+              <h4 class="info-card-title">Zeinny Craft</h4>
+              <span class="info-card-tag">Fashion E-Commerce</span>
+            </div>
+            <p class="info-card-desc">
+              Led a SQL-to-NoSQL migration to MongoDB (40% faster queries) and designed a schema supporting 1M+ entries at 99.9% uptime; implemented JWT authentication with zero security breaches.
+            </p>
+            <ul class="timeline-tech">
+              <li>MongoDB</li>
+              <li>Node.js</li>
+              <li>Schema Design</li>
+              <li>JWT Auth</li>
+            </ul>
+          </article>
+
+          <article class="info-card">
+            <div class="info-card-header">
+              <h4 class="info-card-title">Swipe Telecommunications</h4>
+              <span class="info-card-tag">Fintech & Telecom</span>
+            </div>
+            <p class="info-card-desc">
+              Built secure wallet, virtual account and utility payment systems (airtime, data, electricity billing); integrated Flutterwave, Monnify and VTpass for seamless transactions.
+            </p>
+            <ul class="timeline-tech">
+              <li>Fintech Wallets</li>
+              <li>Monnify</li>
+              <li>Flutterwave</li>
+              <li>VTpass</li>
+            </ul>
+          </article>
+
+          <article class="info-card">
+            <div class="info-card-header">
+              <h4 class="info-card-title">Monietracka</h4>
+              <span class="info-card-tag">Fintech Analytics</span>
+            </div>
+            <p class="info-card-desc">
+              Built secure transaction APIs and a cron-based reconciliation system for failed transactions, improving operational efficiency by 20% and cutting security flaws by 30%.
+            </p>
+            <ul class="timeline-tech">
+              <li>Node.js</li>
+              <li>PostgreSQL</li>
+              <li>Cron Workers</li>
+              <li>Reconciliation</li>
+            </ul>
+          </article>
+        </div>
+
+        <!-- Teaching & Instruction -->
+        <h3 class="sub-section-title">Teaching & Mentorship (150+ Students)</h3>
+        <div class="cards-grid-2">
+          <article class="info-card">
+            <div class="info-card-header">
+              <h4 class="info-card-title">TechPreneur Valley</h4>
+              <span class="info-card-tag">Instructor (2025)</span>
+            </div>
+            <p class="info-card-desc">
+              Taught cohorts from foundational to advanced software development and mentored students 1:1 on real-world projects, architecture design, and modern backend best practices.
+            </p>
+            <ul class="timeline-tech">
+              <li>Backend Mentorship</li>
+              <li>API Architecture</li>
+              <li>Code Reviews</li>
+            </ul>
+          </article>
+
+          <article class="info-card">
+            <div class="info-card-header">
+              <h4 class="info-card-title">Spraditech Digital Solutions</h4>
+              <span class="info-card-tag">Instructor (2022 — 2024)</span>
+            </div>
+            <p class="info-card-desc">
+              Designed a full-stack software development curriculum covering HTML, CSS, JavaScript, React, and Node.js. Successfully mentored aspiring developers and non-tech career changers into the tech industry.
+            </p>
+            <ul class="timeline-tech">
+              <li>Full-Stack Curriculum</li>
+              <li>JavaScript / React</li>
+              <li>150+ Students</li>
+            </ul>
+          </article>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Featured Projects Section -->
+    <section id="projects" class="section projects" aria-labelledby="projects-title">
+      <div class="section-inner">
+        <header class="section-header">
+          <h2 id="projects-title" class="section-title">Featured Projects</h2>
+          <p class="section-subtitle">Real-world production platforms, escrow engines, and mobile applications</p>
+        </header>
+        <div class="projects-grid" role="list">
+          <!-- PayTrust -->
+          <article class="project-card" role="listitem">
+            <div class="project-header">
+              <span class="project-badge">FinTech & Escrow</span>
+              <div class="project-links">
+                <a href="https://github.com/Kelvin-Teck" target="_blank" rel="noopener noreferrer" aria-label="Source code on GitHub" title="View GitHub Code"><i class="fa-brands fa-github"></i></a>
+                <a href="https://github.com/Kelvin-Teck" target="_blank" rel="noopener noreferrer" aria-label="Live Demo" title="Live Preview"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+              </div>
+            </div>
+            <h3 class="project-title">PayTrust — Escrow & Milestone Platform</h3>
+            <p class="project-description">
+              End-to-end full-stack escrow and milestone payment platform designed to secure peer-to-peer and corporate service contracts.
+            </p>
+            <ul class="project-highlights">
+              <li>Designed and built responsive Next.js/Tailwind dashboard with interactive milestone trackers, real-time transaction state updates, and dispute evidence-upload portal.</li>
+              <li>Implemented strict client-side validation and idempotency safeguards across settlement forms, preventing duplicate submissions and race conditions during authorization.</li>
+              <li>Built extensible payment gateway adapter (Paystack/Flutterwave) with idempotent webhook ingestion and a Redis-locked cron worker for automated settlement release on milestone expiry.</li>
+            </ul>
+            <ul class="project-tech" aria-label="Technologies used">
+              <li>Next.js</li>
+              <li>TypeScript</li>
+              <li>Tailwind CSS</li>
+              <li>Node.js</li>
+              <li>PostgreSQL</li>
+              <li>Redis</li>
+            </ul>
+          </article>
+
+          <!-- PrimeBasket -->
+          <article class="project-card" role="listitem">
+            <div class="project-header">
+              <span class="project-badge">Full-Stack E-Commerce</span>
+              <div class="project-links">
+                <a href="https://github.com/Kelvin-Teck" target="_blank" rel="noopener noreferrer" aria-label="Source code on GitHub" title="View GitHub Code"><i class="fa-brands fa-github"></i></a>
+                <a href="https://github.com/Kelvin-Teck" target="_blank" rel="noopener noreferrer" aria-label="Live Demo" title="Live Preview"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+              </div>
+            </div>
+            <h3 class="project-title">PrimeBasket — E-Commerce Engine</h3>
+            <p class="project-description">
+              Full-featured e-commerce platform and management portal built with scalable data modeling and rigorous validation.
+            </p>
+            <ul class="project-highlights">
+              <li>Full-featured storefront with JWT auth, role-based authorization (RBAC), persistent cart/wishlist state, and multi-payment checkout.</li>
+              <li>Dedicated administrative control center for real-time inventory tracking, order status workflows, and sales metrics.</li>
+              <li>High-throughput REST API with Zod validation, Prisma ORM schema migrations, and automated CI/CD pipelines deploying to Render and Vercel.</li>
+            </ul>
+            <ul class="project-tech" aria-label="Technologies used">
+              <li>React.js</li>
+              <li>Node.js</li>
+              <li>TypeScript</li>
+              <li>PostgreSQL</li>
+              <li>Prisma</li>
+              <li>Zod</li>
+            </ul>
+          </article>
+
+          <!-- Dailydots -->
+          <article class="project-card" role="listitem">
+            <div class="project-header">
+              <span class="project-badge">Mobile App</span>
+              <div class="project-links">
+                <a href="https://github.com/Kelvin-Teck" target="_blank" rel="noopener noreferrer" aria-label="Source code on GitHub" title="View GitHub Code"><i class="fa-brands fa-github"></i></a>
+                <a href="https://github.com/Kelvin-Teck" target="_blank" rel="noopener noreferrer" aria-label="Live Demo" title="Live Preview"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+              </div>
+            </div>
+            <h3 class="project-title">Dailydots — Habit Tracking App</h3>
+            <p class="project-description">
+              Cross-platform habit tracker for iOS and Android built with React Native (Expo) and Appwrite backend-as-a-service.
+            </p>
+            <ul class="project-highlights">
+              <li>Supports flexible daily, weekly, and monthly scheduling routines with custom milestone metrics and streak tracking.</li>
+              <li>Detailed progress analytics visualizing completion rates, habit longevity, and goal achievements.</li>
+              <li>Cloud synchronization and automated reminders powered by Appwrite real-time database and serverless cloud functions.</li>
+            </ul>
+            <ul class="project-tech" aria-label="Technologies used">
+              <li>React Native</li>
+              <li>Expo</li>
+              <li>TypeScript</li>
+              <li>Appwrite</li>
+              <li>Cloud Functions</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="section education" aria-labelledby="education-title">
+      <div class="section-inner">
+        <header class="section-header">
+          <h2 id="education-title" class="section-title">Education & Credentials</h2>
+          <p class="section-subtitle">Academic background and recognized professional training</p>
+        </header>
+        <div class="education-grid">
+          <!-- UNILAG -->
+          <article class="education-card">
+            <div class="education-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+            <h3 class="education-institution">University of Lagos</h3>
+            <p class="education-degree">Bachelor of Science (B.Sc.)</p>
+            <p class="education-field">Cell Biology and Genetics</p>
+            <p class="education-location">Second Class Upper Division (CGPA: 4.30 / 5.0) • Nigeria</p>
+          </article>
+
+          <!-- Bright Network -->
+          <article class="education-card">
+            <div class="education-icon"><i class="fa-solid fa-certificate"></i></div>
+            <h3 class="education-institution">Bright Network Internship</h3>
+            <p class="education-degree">Certificate of Completion</p>
+            <p class="education-field">Technology & Innovation Program</p>
+            <p class="education-location">London, United Kingdom</p>
+          </article>
+
+          <!-- Career Builders Academy -->
+          <article class="education-card">
+            <div class="education-icon"><i class="fa-solid fa-award"></i></div>
+            <h3 class="education-institution">Career Builders Academy</h3>
+            <p class="education-degree">Diploma</p>
+            <p class="education-field">Desktop Publishing & Design</p>
+            <p class="education-location">Nigeria</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section contact" aria-labelledby="contact-title">
+      <div class="section-inner">
+        <header class="section-header">
+          <h2 id="contact-title" class="section-title">Get In Touch</h2>
+          <p class="section-subtitle">Interested in collaborating or discussing engineering roles? Let's connect.</p>
+        </header>
+        <div class="contact-inner">
+          <div class="contact-info">
+            <div class="contact-item">
+              <div class="contact-icon"><i class="fa-solid fa-envelope"></i></div>
+              <div>
+                <h3>Email</h3>
+                <a href="mailto:kelvineneh4@gmail.com">kelvineneh4@gmail.com</a>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon"><i class="fa-solid fa-phone"></i></div>
+              <div>
+                <h3>Phone</h3>
+                <a href="tel:+2349064759040">+234 906 475 9040</a>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon"><i class="fa-brands fa-github"></i></div>
+              <div>
+                <h3>GitHub</h3>
+                <a href="https://github.com/Kelvin-Teck" target="_blank" rel="noopener noreferrer">github.com/Kelvin-Teck</a>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon"><i class="fa-brands fa-linkedin"></i></div>
+              <div>
+                <h3>LinkedIn</h3>
+                <a href="https://www.linkedin.com/in/kelvin-eneh-694a42198" target="_blank" rel="noopener noreferrer">linkedin.com/in/kelvin-eneh-694a42198</a>
+              </div>
+            </div>
+          </div>
+          <form class="contact-form" action="https://formspree.io/f/xpwpybqg" method="POST" novalidate>
+            <div class="form-group">
+              <label for="name" class="form-label">Name</label>
+              <input type="text" id="name" name="name" class="form-input" required autocomplete="name" placeholder="Your name" />
+            </div>
+            <div class="form-group">
+              <label for="email" class="form-label">Email</label>
+              <input type="email" id="email" name="email" class="form-input" required autocomplete="email" placeholder="your@email.com" />
+            </div>
+            <div class="form-group">
+              <label for="message" class="form-label">Message</label>
+              <textarea id="message" name="message" class="form-textarea" required rows="6" placeholder="Tell me about your project or opportunity..."></textarea>
+            </div>
+            <button type="submit" class="btn btn--primary btn--submit">
+              <span class="btn-text">Send Message</span>
+              <span class="btn-loader" hidden><i class="fa-solid fa-spinner fa-spin"></i></span>
+            </button>
+            <p class="form-status" aria-live="polite" hidden></p>
           </form>
         </div>
-      </section>
-    </main>
-    <!-- Footer -->
-    <section id="" class="footer-section">
-      <div>
-        <a href="https://github.com/Kelvin-Teck" target="_blank" rel="noopener noreferrer">
-          <i class="fa-brands fa-github"></i>
-          <span>Github</span>
-        </a>
-        <a href="https://www.linkedin.com/in/eneh-chukwuemeka-kelvin-694a42198/" target="_blank" rel="noopener noreferrer">
-          <i class="fa-brands fa-linkedin"></i>
-          <span>LinkedIn</span>
-        </a>
-        <a
-          href="mailto:kelvineneh4@gmail.com"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <i class="fa-solid fa-envelope"></i>
-          <span>Email</span>
-        </a>
       </div>
-      <div>&copy; 2025, Designed By Eneh Kelvin Chukwuemeka</div>
     </section>
-    <script src="./script.js"></script>
-  </body>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer" role="contentinfo">
+    <div class="footer-inner">
+      <div class="footer-main">
+        <p class="footer-brand">Oluwakelvin</p>
+        <p class="footer-tagline">Full-Stack Engineer (Backend-Focused) | TypeScript, Node.js, React, Next.js</p>
+      </div>
+      <div class="footer-links">
+        <a href="https://github.com/Kelvin-Teck" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/kelvin-eneh-694a42198" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="mailto:kelvineneh4@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+        <a href="tel:+2349064759040" aria-label="Phone"><i class="fa-solid fa-phone"></i></a>
+      </div>
+      <p class="footer-copyright">&copy; 2026 Eneh Kelvin Chukwuemeka. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="./script.js"></script>
+</body>
 </html>
